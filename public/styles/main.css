@@ -40,7 +40,7 @@ header{
     cursor: pointer;
     font-size: 16px;
 }
-.comparsion-continer{
+.comparsion-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,3 +80,124 @@ header{
     font-weight: bold;
 }
 
+.stat-item.winner {
+    background: rgba(74, 222, 128, 0.15);
+}
+
+.stat-item.winner .stat-value {
+    color: #4ade80;
+}
+.player-photo {
+    display: none;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 3px solid #ff6b35;
+    margin: 0 auto 16px;
+    background: #444;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid #444;
+    border-top-color: #ff6b35;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 30px auto 12px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-label {
+    color: #ccc;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.clear-btn {
+    display: none;
+    margin: 16px auto 0;
+    padding: 8px 24px;
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #666;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.clear-btn:hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+}
+
+.search-wrap {
+    position: relative;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+    text-align: left;
+}
+
+.suggestions.open {
+    display: block;
+}
+
+.suggestion-item,
+.suggestion-empty {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+.suggestion-item {
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: #3a3a3a;
+}
+
+.suggestion-empty {
+    color: #999;
+}
+
+.suggestion-tag {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+
+.error-message {
+    display: none;
+    width: fit-content;
+    margin: -10px auto 20px;
+    padding: 10px 16px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid #ef4444;
+    border-radius: 6px;
+    color: #fca5a5;
+    text-align: center;
+}
+
+.error-message.show {
+    display: block;
+}

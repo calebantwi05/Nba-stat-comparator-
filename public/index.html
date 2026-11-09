@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Stats</title>
-    <link rel = "stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
@@ -13,29 +13,35 @@
 
     <main>
         <section id="search-section">
-            <div class="search-container">
+        <div class="search-container">
+            <div class="search-wrap">
                 <input type="text" id="player-search" placeholder="search for players....">
-                <button id="search-btn">Search</button>
+                <div id="suggestions" class="suggestions"></div>
             </div>
+            <button id="search-btn">Search</button>
+        </div>
+        <p id="error-message" class="error-message"></p>
         </section>
 
         <section id="comparsion-section">
             <div class="comparsion-container">
                 <div class="player-card" id="player1-card">
+                    <img class="player-photo" alt="">
                     <h3>Player 1</h3>
                     <div class="stats-display"></div>
+                    <button class="clear-btn" id="clear-1">Clear</button>
                 </div>
                 <div class="vs-divider">VS</div>
                 <div class="player-card" id="player2-card">
+                    <img class="player-photo" alt="">
                     <h3>Player 2</h3>
                     <div class="stats-display"></div>
+                    <button class="clear-btn" id="clear-2">Clear</button>
                 </div>
             </div>
-
-            
         </section>
     </main>
 
     <script src="scripts/main.js"></script>
 </body>
-<html>
+</html>
